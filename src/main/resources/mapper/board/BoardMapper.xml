@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.common.gradleproject.mapper.BoardMapper">
+<mapper namespace="com.common.gradleproject.board.mapper.BoardMapper">
 
-    <select id="selectBoard" parameterType="com.common.gradleproject.domain.BoardDTO" resultType="int">
+    <select id="selectBoard" parameterType="com.common.gradleproject.board.domain.BoardDTO" resultType="int">
         SELECT
             COUNT(*)
         FROM vision.board

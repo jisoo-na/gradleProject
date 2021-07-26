@@ -1,7 +1,7 @@
-package com.common.gradleproject.service;
+package com.common.gradleproject.board.service;
 
-import com.common.gradleproject.domain.BoardDTO;
-import com.common.gradleproject.mapper.BoardMapper;
+import com.common.gradleproject.board.domain.BoardDTO;
+import com.common.gradleproject.board.mapper.BoardMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class BoardServiceImpl implements BoardService {
@@ -16,6 +16,12 @@ public class BoardServiceImpl implements BoardService {
         result = boardMapper.selectBoard(boardDTO);
 
         return result;
+    }
+
+    @Override
+    public void insertBoard(BoardDTO boardDTO) {
+
+        boardMapper.insertBoard(boardDTO);
     }
 
 }

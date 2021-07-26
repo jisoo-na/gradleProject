@@ -1,4 +1,4 @@
-package com.common.gradleproject.domain;
+package com.common.gradleproject.board.domain;
 
 import lombok.Getter;
 import lombok.Setter;
