@@ -37,7 +37,8 @@ public class DBConfiguration {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setDataSource(dataSource());
         factoryBean.setMapperLocations(applicationContext.getResources("classpath:/mapper/**/*Mapper.xml"));
-        factoryBean.setTypeAliasesPackage("com.common.gradleproject.domain");
+        factoryBean.setTypeAliasesPackage("com.common.gradleproject.common.gradleproject.**.*.domain");
+//        factoryBean.setTypeAliasesPackage("com.com.common.gradleproject.common.gradleproject.board.domain");
         factoryBean.setConfiguration(mybatisConfg());
         return factoryBean.getObject();
     }
