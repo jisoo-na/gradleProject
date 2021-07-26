@@ -44,7 +44,6 @@ public class BoardController {
 
 
         int cnt = boardMapper.selectBoard(boardDTO);
-//        System.out.println("cnt 값 :: " + cnt);
         loggger.info("cnt 값 :: " + cnt);
 
         commonController.setJsUrl(mav);
