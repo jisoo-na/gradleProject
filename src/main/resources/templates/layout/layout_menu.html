@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <aside class="main-sidebar sidebar-dark-primary elevation-4" th:fragment="left_menu">
+        <a href="#" class="brand-link">
+            <img src="/lib/AdminLTE-3.1.0/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+            <span class="brand-text font-weight-light">Project</span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+
+            <!-- SidebarSearch Form -->
+            <div class="form-inline">
+                <div class="input-group" data-widget="sidebar-search">
+                    <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-sidebar">
+                            <i class="fas fa-search fa-fw"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Menu -->
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <!-- Add icons to the links using the .nav-icon class
+                         with font-awesome or any other icon font library -->
+                    <li class="nav-item menu-open">
+                        <a href="#" class="nav-link active" id="tp_adm_left_dash_board">
+                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <p>
+                                Dashboard
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/adm/dash_board/main" class="nav-link active" id="tp_adm_left_dash_board_1">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Dashboard v1</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/adm/dash_board/ex2" class="nav-link" id="tp_adm_left_dash_board_2">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Dashboard v2</p>
+                                </a>
+                            </li>
+                            <!--
+                            <li class="nav-item">
+                              <a href="./index3.html" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Dashboard v3</p>
+                              </a>
+                            </li>
+                             -->
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="tp_adm_left_common_manage">
+                            <i class="nav-icon fab fa-creative-commons"></i>
+                            <p>
+                                공통 관리
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/adm/commonManage/commonCode"class="nav-link" id="tp_adm_left_common_code">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>공통코드 관리</p>
+                                </a>
+                            </li>
+                            <!-- 카테고리 관리 -->
+                            <li class="nav-item">
+                                <a href="/adm/commonManage/categoryManage" class="nav-link" id="tp_adm_left_productManage_categoryManage">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>카테고리관리</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="tp_adm_left_product">
+                            <i class="nav-icon fab fa-product-hunt"></i>
+                            <p>
+                                상품 관리
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/adm/product/regProductPage" class="nav-link" id="tp_adm_left_product_register">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>상품 등록</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/adm/product/productListPage" class="nav-link" id="tp_adm_left_product_list">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>상품 조회/수정</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!------- 임시 메뉴 시작------------------>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="tp_adm_left_configuration">
+                            <i class="nav-icon fab fa-lg fa-bandcamp"></i>
+                            <p>
+                                환경설정
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/adm/configuration/storeInfoManage" class="nav-link" id="tp_adm_left_configuration_storeInfoManage">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>상점기본정보관리</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/adm/configuration/siteInfoManage" class="nav-link" id="tp_adm_left_configuration_siteInfoManage">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>사이트정보관리</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/adm/configuration/chainstorePermit" class="nav-link" id="tp_adm_left_configuration_chainstorePermit">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>입점사 승인여부</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/adm/configuration/setupExpense" class="nav-link" id="tp_adm_left_configuration_setupExpense">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>전체운영설정</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/adm/configuration/storePolicy" class="nav-link" id="tp_adm_left_configuration_storePolicy">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>상점운영정책</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/adm/configuration/paymentManage" class="nav-link" id="tp_adm_left_configuration_paymentManage">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>결제정보관리</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="tp_adm_left_designSet">
+                            <i class="nav-icon fab fa-alipay"></i>
+                            <p>
+                                디자인 설정
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/adm/designSet/designSet" class="nav-link" id="tp_adm_left_designSet_designSet">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>디자인설정</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="/adm/designSet/eventManage" class="nav-link" id="tp_adm_left_designSet_eventManage">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>기획전,이벤트관리</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="/adm/designSet/designEtc" class="nav-link" id="tp_adm_left_designSet_designEtc">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>기타</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!--
+                    <li class="nav-item">
+                      <a href="#" class="nav-link" id="tp_adm_left_productManage">
+                        <i class="nav-icon fab fas fa-box"></i>
+                        <p>
+                         상품관리
+                          <i class="right fas fa-angle-left"></i>
+                        </p>
+                      </a>
+                      <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                          <a href="/adm/productManage/productManage" class="nav-link" id="tp_adm_left_productManage_productManage">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>상품관리</p>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    -->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="tp_adm_left_orderManage">
+
+                            <i class="nav-icon fab far fa-credit-card"></i>
+
+                            <p>
+                                주문관리
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/adm/orderManage/orderTotalManage" class="nav-link" id="tp_adm_left_orderManage_orderTotalManage">
+                                    <i class="far fa-circle nav-icon"></i>
+
+                                    <p>주문종합관리</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/adm/orderManage/refundManage" class="nav-link" id="tp_adm_left_orderManage_refundManage">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>취소/반품/교환관리</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/adm/orderManage/orderEtcManage" class="nav-link" id="tp_adm_left_orderManage_orderEtcManage">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>주문기타관리</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="tp_adm_left_operationsManage">
+                            <i class="nav-icon fab fas fa-chart-line"></i>
+
+                            <p>
+                                운영관리
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/adm/operationsManage/customerReception" class="nav-link" id="tp_adm_left_operationsManage_customerReception">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>고객운영관리</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/adm/operationsManage/storeOwnerManage" class="nav-link" id="tp_adm_left_operationsManage_storeOwnerManage">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>상점주운영관리</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="/adm/operationsManage/oneToOne" class="nav-link" id="tp_adm_left_operationsManage_oneToOne">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>1:1문의</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/adm/operationsManage/faq" class="nav-link" id="tp_adm_left_operationsManage_faq">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>자주하는질문</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/adm/operationsManage/notice" class="nav-link" id="tp_adm_left_operationsManage_notice">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>공지사항</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/adm/operationsManage/noticePopup" class="nav-link" id="tp_adm_left_operationsManage_notice_popup">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>공지팝업</p>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="tp_adm_left_memberManage">
+                            <i class="nav-icon fas fa-address-card"></i>
+                            <p>
+                                회원관리
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/adm/memberManage/memberSet" class="nav-link" id="tp_adm_left_memberManage_memberSet">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>회원관련설정</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="/adm/memberManage/memberManage" class="nav-link" id="tp_adm_left_memberManage_memberManage">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>회원관리</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="/adm/memberManage/mailSendManage" class="nav-link" id="tp_adm_left_memberManage_mailSendManage">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>메일발송관리</p>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="tp_adm_left_analysis">
+                            <i class="nav-icon fas fa-chart-bar"></i>
+                            <p>
+                                통계분석
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/adm/analysis/salesAnalysis" class="nav-link" id="tp_adm_left_analysis_salesAnalysis">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>매출분석</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="/adm/analysis/productAnalysis" class="nav-link" id="tp_adm_left_analysis_productAnalysis">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>상품분석</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="/adm/analysis/memberAnalysis" class="nav-link" id="tp_adm_left_analysis_memberAnalysis">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>고객분석</p>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="tp_adm_left_storeManage">
+                            <i class="nav-icon fab fa-fort-awesome-alt"></i>
+                            <p>
+                                입점사관리
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/adm/storeManage/storeManage" class="nav-link" id="tp_adm_left_storeManage_storeManage">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>입점사관리</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="/adm/storeManage/storeProductManage" class="nav-link" id="tp_adm_left_storeManage_storeProductManage">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>입점사상품관리</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/adm/storeManage/storeEventManage" class="nav-link" id="tp_adm_left_storeManage_storeEventManage">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>입점사이벤트몰관리</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="tp_adm_left_paymentManage">
+                            <i class="nav-icon fab fa-cc-mastercard"></i>
+
+                            <p>
+                                정산관리
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/adm/paymentManage/paymentCalculation" class="nav-link" id="tp_adm_left_paymentManage_paymentCalculation">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>결제/정산내역</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- 임시 메뉴 (상품 등록 > 카테고리)-->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" id="tp_adm_left_testProduct">
+                            <i class="nav-icon fab fa-cc-mastercard"></i>
+
+                            <p>
+                                테스트 상품
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/adm/product/test/regProductPage" class="nav-link" id="tp_adm_left_test_categoryMng">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>상품 카테고리</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/adm/commonManage/test/getProductInfoPage" class="nav-link" id="tp_adm_left_test_category">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>상품 카테고리 조회</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="/test/excel" class="nav-link" id="tp_adm_left_excel">
+                            <i class="nav-icon fas fa-cloud-download-alt"></i>
+                            <p>
+                                엑셀다운로드
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+    </aside>
+</html>

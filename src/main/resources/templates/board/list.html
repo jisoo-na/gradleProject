@@ -1,11 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout_header :: header">
     <title>Title</title>
+<!--    <script type="text/javascript" src="templates/board/js/list.js"></script>-->
+<!--    <script type="text/javascript" th:src="templates/board/js/list.js"></script>-->
+<!--    <script type="text/javascript" th:src="${jsUrl}"></script>-->
 </head>
-<body>
-  list board
-    <span th:text="${t}">여기는 제목</span>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+    <nav th:replace="layout/layout_top.html :: top_area"></nav>
+    <aside th:replace="layout/layout_menu.html :: left_menu"></aside>
+</div>
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>계좌 인증</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">공통기능 (sample)</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">title</h3>
+                        </div>
+                        <div class="card-body">
+                            <span th:text="${t}">여기는 제목</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 </body>
 </html>
