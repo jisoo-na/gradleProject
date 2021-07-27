@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout_header :: header">
+    <title>이미지 확대</title>
+</head>
+<style>
+    * {box-sizing: border-box;}
+
+    .image1 .img-zoom-container {
+        position: relative;
+    }
+
+    .image1 .img-zoom-lens {
+        position: absolute;
+        border: 1px solid #f2f2f2;
+        width: 50px;
+        height: 50px;
+    }
+
+    .image1 .img-zoom-result {
+        border: 1px solid #d4d4d4;
+        width: 300px;
+        height: 300px;
+    }
+
+    .img-magnifier-container {
+        position: relative;
+    }
+
+    .img-magnifier-glass {
+        position: absolute;
+        border: 1px solid #8a8a8a;
+        cursor: none;
+        width: 250px;
+        height: 250px;
+    }
+</style>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+    <nav th:replace="layout/layout_top.html :: top_area"></nav>
+    <aside th:replace="layout/layout_menu.html :: left_menu"></aside>
+</div>
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>이미지 확대</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">temp</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 image1">
+                <div class="card">
+                    <!-- card header -->
+                    <div class="card-header">
+                        <h3 class="card-title">이미지 확대 테스트</h3>
+                    </div>
+                    <!--end card header -->
+                    <!-- card bady -->
+                    <div class="card-body">
+
+                        <div class="img-zoom-container">
+<!--                            <img id="myimage" src="/lib/test1.png" width="300" height="240" alt="image">-->
+                            <img id="myimage" src="/img/test1.png" width="300" height="240" alt="image">
+                            <div id="myresult" class="img-zoom-result"></div>
+                        </div>
+
+                        <div id="zoomWrap" class="zoomWrap" style="top: 240px; left: 311.5px; width: 600px; height: 600px; display: none;">
+                            <div class="zoomWindow" style="top: 0px; left: 692px; width: 586px; height: 586px; display: none;">
+                                <img src="/img/test1.png" style="width: 1200px; height: 1200px; position: relative; left: -614px; top: -167px;">
+                            </div>
+                            <div class="zoomTarget" style="width: 600px; height: 600px;">
+                                <div class="zoomLens" style="width: 293px; height: 293px; left: 307px; top: 143.5px; display: none;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>      <!-- col end -->
+            </div>
+
+            <div class="col-md-6 image2">
+                <div class="card">
+                    <!-- card header -->
+                    <div class="card-header">
+                        <h3 class="card-title">이미지 확대 테스트2</h3>
+                    </div>
+                    <!--end card header -->
+                    <!-- card bady -->
+                    <div class="card-body">
+
+                        <div class="img-magnifier-container">
+                            <img id="myimage2" src="/img/test2.png" width="600" height="400" alt="image">
+                        </div>
+                    </div>
+                </div>      <!-- col end -->
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+</body>
+</html>
